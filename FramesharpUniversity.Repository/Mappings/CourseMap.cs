@@ -10,7 +10,7 @@ namespace FramesharpUniversity.Repository.Mappings
     {
         public CourseMap()
         {
-            Id(x => x.CourseId).GeneratedBy.Identity();
+            this.Id(x => x.CourseId).GeneratedBy.Identity();
 
 			Map(x => x.Name).Not.Nullable().Length(50);
 			Map(x => x.Description).Not.Nullable().Length(200);

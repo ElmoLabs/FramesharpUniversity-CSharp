@@ -14,7 +14,7 @@ namespace FramesharpUniversity.Configuration
     {
         public DependencyInjectionRegistry()
         {
-            Scan(x =>
+            this.Scan(x =>
                      {
                          x.WithDefaultConventions();
                          x.Assembly("FramesharpUniversity.DomainService");

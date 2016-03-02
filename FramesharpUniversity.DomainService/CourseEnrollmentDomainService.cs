@@ -7,7 +7,7 @@ using FramesharpUniversity.Repository.Interfaces;
 
 namespace FramesharpUniversity.DomainService
 {
-    public class CourseEnrollmentDomainService : CrudDomainService<Domain.CourseEnrollment, ICourseEnrollmentRepository>, ICourseEnrollmentDomainService
+    public class CourseEnrollmentDomainService : CrudDomainService<CourseEnrollment, ICourseEnrollmentRepository>, ICourseEnrollmentDomainService
     {
         public CourseEnrollmentDomainService(IOperationCallContext context) : 
                 base(context)

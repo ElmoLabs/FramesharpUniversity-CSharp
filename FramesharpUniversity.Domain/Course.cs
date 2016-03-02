@@ -8,17 +8,17 @@ namespace FramesharpUniversity.Domain
     {
         public Course()
         {
-			CourseEnrollmentList = new List<CourseEnrollment>();
-			CourseInstructorList = new List<CourseInstructor>();
-			CourseScheduleList = new List<CourseSchedule>();
+            this.CourseEnrollmentList = new List<CourseEnrollment>();
+            this.CourseInstructorList = new List<CourseInstructor>();
+            this.CourseScheduleList = new List<CourseSchedule>();
         }
         
-        public Course(System.Nullable<int> courseId)
+        public Course(Nullable<int> courseId)
         {
-			CourseId = courseId;
+            this.CourseId = courseId;
         }
         
-        public virtual System.Nullable<int> CourseId { get; set; }
+        public virtual Nullable<int> CourseId { get; set; }
         
         public virtual string Name { get; set; }
         
@@ -37,7 +37,7 @@ namespace FramesharpUniversity.Domain
         
         public override int GetHashCode()
         {
-			return string.Concat(CourseId).GetHashCode();
+			return string.Concat(this.CourseId).GetHashCode();
         }
     }
 }

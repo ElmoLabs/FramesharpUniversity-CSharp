@@ -1,17 +1,18 @@
 ﻿using System;
+using Framesharp.Presentation.Web.Mvc.Models;
 
 namespace FramesharpUniversity.WebApplication.Models
 {
-    public class Demonstration
+    public class Demonstration : ModelBase
     {
-        public static implicit operator Domain.Demonstration(Models.Demonstration model)
+        public static implicit operator Domain.Demonstration(Demonstration model)
         {
             return Transcriptors.DemonstrationTranscriptor.ConvertFromModelToDomain(model, new Domain.Demonstration());
         }
 
-        public static implicit operator Models.Demonstration(Domain.Demonstration domain)
+        public static implicit operator Demonstration(Domain.Demonstration domain)
         {
-            return Transcriptors.DemonstrationTranscriptor.ConvertToModelFromDomain(new Models.Demonstration(), domain);
+            return Transcriptors.DemonstrationTranscriptor.ConvertToModelFromDomain(new Demonstration(), domain);
         }
 
         public virtual int DemonstrationId { get; set; }
@@ -22,7 +23,7 @@ namespace FramesharpUniversity.WebApplication.Models
 
         public virtual bool SomeFlag { get; set; }
 
-        public virtual DateTime CreationDate { get; set; }
+        public virtual DateTime? CreationDate { get; set; }
 
         public virtual DateTime? EditionDate { get; set; }
 
@@ -31,7 +32,7 @@ namespace FramesharpUniversity.WebApplication.Models
         /// </summary>
         public Demonstration()
         {
-            InitializeObject();
+            this.InitializeObject();
         }
 
         /// <summary>
@@ -42,25 +43,14 @@ namespace FramesharpUniversity.WebApplication.Models
             // Virtual properties initilization instructions
         }
 
-        /// <summary>
-        /// Overrides equality comparison between business domain objects
-        ///  so that business information is used instead of comparing 
-        ///  object instances
-        /// </summary>
-        /// <param name="obj">Instance of the object to compare</param>
-        /// <returns>True if it is the same object business-wise</returns>
         public override bool Equals(object obj)
         {
             return (obj as Demonstration) != null && this.DemonstrationId == (obj as Demonstration).DemonstrationId;
         }
 
-        /// <summary>
-        /// Gets the hash code using business identification values
-        /// </summary>
-        /// <returns>A hash code that represents this instance</returns>
         public override int GetHashCode()
         {
-            return string.Concat(DemonstrationId).GetHashCode();
+            return string.Concat(this.DemonstrationId).GetHashCode();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace FramesharpUniversity.Repository.Mappings
     {
         public DemonstrationMapping()
         {
-            Id(c => c.DemonstrationId).Column("DemonstrationId").GeneratedBy.Native();
+            this.Id(c => c.DemonstrationId).Column("DemonstrationId").GeneratedBy.Native();
 
             Map(c => c.SomeDescription);
             Map(c => c.SomeNumber);

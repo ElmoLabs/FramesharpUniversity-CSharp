@@ -10,7 +10,7 @@ namespace FramesharpUniversity.Repository.Mappings
     {
         public PersonMap()
         {
-            Id(x => x.DocumentNumber).GeneratedBy.Identity();
+            this.Id(x => x.DocumentNumber).GeneratedBy.Identity();
 
 			Map(x => x.Name).Not.Nullable().Length(200);
 			Map(x => x.Gender).Not.Nullable().Length(1);

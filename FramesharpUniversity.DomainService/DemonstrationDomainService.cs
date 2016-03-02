@@ -10,11 +10,11 @@ namespace FramesharpUniversity.DomainService
 {
     public class DemonstrationDomainService : CrudDomainService<Demonstration, IDemonstrationRepository>, IDemonstrationDomainService
     {
-        private readonly IDemonstrationRepository _demonstrationRepository; 
+        private readonly IDemonstrationRepository demonstrationRepository; 
 
         public DemonstrationDomainService(IOperationCallContext context) : base(context)
         {
-            _demonstrationRepository = RepositoryFactory.Get<IDemonstrationRepository>(context);
+            this.demonstrationRepository = RepositoryFactory.Get<IDemonstrationRepository>(context);
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace FramesharpUniversity.DomainService
                 SomeFlag = someFlag
             };
 
-            Repository.Save(demonstration);
+            this.Repository.Save(demonstration);
 
             return demonstration;
         }
@@ -47,7 +47,7 @@ namespace FramesharpUniversity.DomainService
         [TransactionScope]
         public Demonstration GetDemonstration(int demonstrationId)
         {
-            return _demonstrationRepository.Get(demonstrationId);
+            return this.demonstrationRepository.Get(demonstrationId);
         }
     }
 }

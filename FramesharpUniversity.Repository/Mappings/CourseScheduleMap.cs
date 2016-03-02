@@ -10,7 +10,7 @@ namespace FramesharpUniversity.Repository.Mappings
     {
         public CourseScheduleMap()
         {
-            Id(x => x.CourseScheduleId).GeneratedBy.Identity();
+            this.Id(x => x.CourseScheduleId).GeneratedBy.Identity();
 
 			References(x => x.Course);
 			References(x => x.Instructor);

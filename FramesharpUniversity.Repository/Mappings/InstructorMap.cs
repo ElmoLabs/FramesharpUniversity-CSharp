@@ -10,7 +10,7 @@ namespace FramesharpUniversity.Repository.Mappings
     {
         public InstructorMap()
         {
-            Id(x => x.InstructorId).GeneratedBy.Identity();
+            this.Id(x => x.InstructorId).GeneratedBy.Identity();
 
 			References(x => x.Person);
 

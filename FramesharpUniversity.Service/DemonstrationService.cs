@@ -7,16 +7,16 @@ namespace FramesharpUniversity.Service
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class DemonstrationService : IDemonstrationService
     {
-        private readonly DemonstrationServiceImplementation _serviceImplementation;
+        private readonly DemonstrationServiceImplementation serviceImplementation;
 
         public DemonstrationService()
         {
-            _serviceImplementation = new DemonstrationServiceImplementation();
+            this.serviceImplementation = new DemonstrationServiceImplementation();
         }
 
         public Demonstration GetDemonstration(int demonstrationId)
         {
-            return _serviceImplementation.GetDemonstration(demonstrationId);
+            return this.serviceImplementation.GetDemonstration(demonstrationId);
         }
     }
 }

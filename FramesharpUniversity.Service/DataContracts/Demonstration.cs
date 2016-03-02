@@ -29,7 +29,7 @@ namespace FramesharpUniversity.Service.DataContracts
         /// </summary>
         public Demonstration()
         {
-            InitializeObject();
+            this.InitializeObject();
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace FramesharpUniversity.Service.DataContracts
 
         public override int GetHashCode()
         {
-            return string.Concat(DemonstrationId).GetHashCode();
+            return string.Concat(this.DemonstrationId).GetHashCode();
         }
     }
 }

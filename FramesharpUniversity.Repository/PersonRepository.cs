@@ -10,7 +10,7 @@ using FramesharpUniversity.Repository.Interfaces;
 
 namespace FramesharpUniversity.Repository
 {
-    public class PersonRepository : RepositoryBase<Domain.Person>, IPersonRepository
+    public class PersonRepository : RepositoryBase<Person>, IPersonRepository
     {
         public PersonRepository(IOperationCallContext context) : 
                 base(context)

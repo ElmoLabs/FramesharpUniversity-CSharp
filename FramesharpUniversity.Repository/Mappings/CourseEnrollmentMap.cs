@@ -10,7 +10,7 @@ namespace FramesharpUniversity.Repository.Mappings
     {
         public CourseEnrollmentMap()
         {
-			CompositeId().KeyProperty(x => x.CourseId).KeyProperty(x => x.CourseScheduleId);
+            this.CompositeId().KeyProperty(x => x.CourseId).KeyProperty(x => x.CourseScheduleId);
 
 			References(x => x.Course);
 			References(x => x.CourseSchedule);

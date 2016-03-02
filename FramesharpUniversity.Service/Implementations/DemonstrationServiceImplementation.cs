@@ -8,11 +8,11 @@ namespace FramesharpUniversity.Service.Implementations
 {
     public class DemonstrationServiceImplementation : ServiceBase
     {
-        private readonly IDemonstrationDomainService _demonstrationDomainService;
+        private readonly IDemonstrationDomainService demonstrationDomainService;
 
         public DemonstrationServiceImplementation()
         {
-            _demonstrationDomainService = DomainServiceFactory.Get<IDemonstrationDomainService>(OperationCallContext);
+            this.demonstrationDomainService = DomainServiceFactory.Get<IDemonstrationDomainService>(this.OperationCallContext);
         }
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace FramesharpUniversity.Service.Implementations
         /// <returns>An instance of <see cref="Domain.Demonstration"/></returns>
         public Demonstration GetDemonstration(int demonstrationId)
         {
-            Domain.Demonstration demonstrationDomain = _demonstrationDomainService.GetDemonstration(demonstrationId);
+            Domain.Demonstration demonstrationDomain = this.demonstrationDomainService.GetDemonstration(demonstrationId);
 
             return DemonstrationTranscriptor.ConvertToDataContractFromDomain(demonstrationDomain);
         }

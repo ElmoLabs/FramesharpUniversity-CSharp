@@ -12,7 +12,7 @@ namespace FramesharpUniversity.Configuration
     {
         public RootApplicationSettings()
         {
-            InitializeClass();
+            this.InitializeClass();
         }
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace FramesharpUniversity.Configuration
         public void InitializeClass()
         {
             // Defines which IoC registry classes will be loaded.
-            DependencyRegistries = new List<Registry>()
+            this.DependencyRegistries = new List<Registry>()
                 {
                     { new Framesharp.DependencyInjection.Registry.NHibernateRegistry(DatabaseSettings.BuildSessionFactory()) },
                     { new Framesharp.DependencyInjection.Registry.CoreRegistry() },

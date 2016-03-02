@@ -10,7 +10,7 @@ using FramesharpUniversity.Repository.Interfaces;
 
 namespace FramesharpUniversity.Repository
 {
-    public class InstructorRepository : RepositoryBase<Domain.Instructor>, IInstructorRepository
+    public class InstructorRepository : RepositoryBase<Instructor>, IInstructorRepository
     {
         public InstructorRepository(IOperationCallContext context) : 
                 base(context)

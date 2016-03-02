@@ -15,13 +15,13 @@ namespace FramesharpUniversity.WebApplication.Controllers
 
         public DemonstrationController()
         {
-            _demonstrationDomainService = DomainServiceFactory.Get<IDemonstrationDomainService>(OperationCallContext.Current);
+            this._demonstrationDomainService = DomainServiceFactory.Get<IDemonstrationDomainService>(OperationCallContext.Current);
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            Models.Demonstration demonstration = _demonstrationDomainService.GetDemonstration(1);
+            Models.Demonstration demonstration = this._demonstrationDomainService.GetDemonstration(1);
 
             return View(demonstration);
         }

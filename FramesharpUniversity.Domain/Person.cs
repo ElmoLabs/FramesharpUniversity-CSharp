@@ -8,16 +8,16 @@ namespace FramesharpUniversity.Domain
     {
         public Person()
         {
-			InstructorList = new List<Instructor>();
-			StudentList = new List<Student>();
+            this.InstructorList = new List<Instructor>();
+            this.StudentList = new List<Student>();
         }
         
-        public Person(System.Nullable<long> documentNumber)
+        public Person(Nullable<long> documentNumber)
         {
-			DocumentNumber = documentNumber;
+            this.DocumentNumber = documentNumber;
         }
         
-        public virtual System.Nullable<long> DocumentNumber { get; set; }
+        public virtual Nullable<long> DocumentNumber { get; set; }
         
         public virtual string Name { get; set; }
         
@@ -34,7 +34,7 @@ namespace FramesharpUniversity.Domain
         
         public override int GetHashCode()
         {
-			return string.Concat(DocumentNumber).GetHashCode();
+			return string.Concat(this.DocumentNumber).GetHashCode();
         }
     }
 }

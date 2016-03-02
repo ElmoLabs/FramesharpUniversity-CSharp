@@ -12,11 +12,11 @@ namespace FramesharpUniversity.DomainService.Test
     [TestClass]
     public class DemonstrationDomainServiceTest : TestClassBase
     {
-        private readonly IDemonstrationDomainService _demonstrationDomainService;
+        private readonly IDemonstrationDomainService demonstrationDomainService;
 
         public DemonstrationDomainServiceTest() : base(new RootApplicationSettings())
         {
-            _demonstrationDomainService = DomainServiceFactory.Get<IDemonstrationDomainService>(OperationCallContext);
+            this.demonstrationDomainService = DomainServiceFactory.Get<IDemonstrationDomainService>(this.OperationCallContext);
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace FramesharpUniversity.DomainService.Test
                 SomeFlag = true,
             };
 
-            _demonstrationDomainService.CreateDemonstration(
+            this.demonstrationDomainService.CreateDemonstration(
                 demonstration.SomeDescription, 
                 demonstration.SomeNumber, 
                 demonstration.SomeFlag);
@@ -46,11 +46,11 @@ namespace FramesharpUniversity.DomainService.Test
         [TestMethod]
         public void GetDemonstrationTest()
         {
-            Demonstration demonstration = EquivalencePartition.GetRandom<Demonstration>();
+            Demonstration demonstration = this.EquivalencePartition.GetRandom<Demonstration>();
 
             if (demonstration == null) Assert.Inconclusive("Demonstration table is empty");
 
-            _demonstrationDomainService.GetDemonstration(demonstration.DemonstrationId);
+            this.demonstrationDomainService.GetDemonstration(demonstration.DemonstrationId);
         }
     }
 }

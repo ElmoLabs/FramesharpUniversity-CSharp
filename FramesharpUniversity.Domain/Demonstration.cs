@@ -22,7 +22,7 @@ namespace FramesharpUniversity.Domain
         /// </summary>
         public Demonstration()
         {
-            InitializeObject(null);
+            this.InitializeObject(null);
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace FramesharpUniversity.Domain
         /// </summary>
         public Demonstration(int demonstrationId)
         {
-            InitializeObject(demonstrationId);
+            this.InitializeObject(demonstrationId);
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace FramesharpUniversity.Domain
         /// </summary>
         private void InitializeObject(int? demonstrationId)
         {
-            if (demonstrationId.HasValue) DemonstrationId = demonstrationId.Value;
+            if (demonstrationId.HasValue) this.DemonstrationId = demonstrationId.Value;
         }
         
         /// <summary>
@@ -59,7 +59,7 @@ namespace FramesharpUniversity.Domain
         /// <returns>A hash code that represents this instance</returns>
         public override int GetHashCode()
         {
-            return string.Concat(DemonstrationId).GetHashCode();
+            return string.Concat(this.DemonstrationId).GetHashCode();
         }
     }
 }

@@ -7,7 +7,7 @@ using FramesharpUniversity.Repository.Interfaces;
 
 namespace FramesharpUniversity.DomainService
 {
-    public class PersonDomainService : CrudDomainService<Domain.Person, IPersonRepository>, IPersonDomainService
+    public class PersonDomainService : CrudDomainService<Person, IPersonRepository>, IPersonDomainService
     {
         public PersonDomainService(IOperationCallContext context) : 
                 base(context)

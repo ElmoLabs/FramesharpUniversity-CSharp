@@ -5,7 +5,7 @@ using FramesharpUniversity.Domain;
 
 namespace FramesharpUniversity.Repository.Interfaces
 {
-    public interface ICourseRepository : IRepository<Domain.Course>
+    public interface ICourseRepository : IRepository<Course>
     {
     }
 }

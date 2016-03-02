@@ -9,16 +9,16 @@ namespace FramesharpUniversity.Domain
         public Student()
         { }
         
-        public Student(System.Nullable<int> studentId)
+        public Student(Nullable<int> studentId)
         {
-			StudentId = studentId;
+            this.StudentId = studentId;
         }
         
-        public virtual System.Nullable<int> StudentId { get; set; }
+        public virtual Nullable<int> StudentId { get; set; }
         
         public virtual Person Person { get; set; }
         
-        public virtual System.DateTime EnrollmentDate { get; set; }
+        public virtual DateTime EnrollmentDate { get; set; }
         
         public override bool Equals(object obj)
         {
@@ -27,7 +27,7 @@ namespace FramesharpUniversity.Domain
         
         public override int GetHashCode()
         {
-			return string.Concat(StudentId).GetHashCode();
+			return string.Concat(this.StudentId).GetHashCode();
         }
     }
 }

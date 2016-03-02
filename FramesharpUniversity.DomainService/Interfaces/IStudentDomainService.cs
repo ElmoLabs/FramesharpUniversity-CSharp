@@ -4,7 +4,7 @@ using FramesharpUniversity.Domain;
 
 namespace FramesharpUniversity.DomainService.Interfaces
 {
-    public interface IStudentDomainService : ICrudDomainService<Domain.Student>
+    public interface IStudentDomainService : ICrudDomainService<Student>
     {
     }
 }

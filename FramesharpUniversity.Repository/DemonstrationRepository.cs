@@ -18,7 +18,7 @@ namespace FramesharpUniversity.Repository
         /// <returns>An instance of <see cref="Domain.Demonstration"/></returns>
         public Demonstration GetDemonstration(int demonstrationId)
         {
-            return Get(demonstrationId);
+            return this.Get(demonstrationId);
         }
     }
 }

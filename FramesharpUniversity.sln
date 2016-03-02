@@ -1,33 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.Configuration", "FramesharpUniversity.Configuration\FramesharpUniversity.Configuration.csproj", "{D44A2443-6BFB-4911-BE5D-41A642D39A5D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.Domain", "FramesharpUniversity.Domain\FramesharpUniversity.Domain.csproj", "{9E626CCB-45DF-4735-A8F0-276E98E71689}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.DomainService", "FramesharpUniversity.DomainService\FramesharpUniversity.DomainService.csproj", "{8F0F2D43-2445-4E5B-8C06-32D97B4BD147}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.Repository", "FramesharpUniversity.Repository\FramesharpUniversity.Repository.csproj", "{B0AD3212-9988-4B95-A9FE-22C5FA7470EA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.DomainService.Test", "FramesharpUniversity.DomainService.Test\FramesharpUniversity.DomainService.Test.csproj", "{BF27B31B-8845-4B8F-A025-0E51ACB43C70}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application Program Interface", "Application Program Interface", "{62E926B5-53E0-4456-8C32-182995C97836}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1296F789-07B6-4583-AB58-A81EA31F59AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{791E8A22-0FE7-4F29-8949-ED228308511E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.Service", "FramesharpUniversity.Service\FramesharpUniversity.Service.csproj", "{0D418C44-B781-48C3-BA9A-2171E6755711}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FramesharpUniversity.Database", "FramesharpUniversity.Database\FramesharpUniversity.Database.sqlproj", "{DAF96426-8213-47B2-9DD9-6142940CBD45}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{636A16AD-51F4-4613-8524-F16DCDC3426D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Application", "Web Application", "{2C8C4A7E-118F-496E-B236-9F8990ED065A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.WebApplication", "FramesharpUniversity.WebApplication\FramesharpUniversity.WebApplication.csproj", "{FC71ADF4-78DE-431F-99F3-8C8CD354F346}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{ACD28495-6153-4DF5-AEB8-899DE90886EB}"
 	ProjectSection(SolutionItems) = preProject
@@ -45,6 +29,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 		Resources\Framesharp.ServiceModel.dll = Resources\Framesharp.ServiceModel.dll
 		Resources\Framesharp.Test.dll = Resources\Framesharp.Test.dll
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.Configuration", "FramesharpUniversity.Configuration\FramesharpUniversity.Configuration.csproj", "{D44A2443-6BFB-4911-BE5D-41A642D39A5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.Domain", "FramesharpUniversity.Domain\FramesharpUniversity.Domain.csproj", "{9E626CCB-45DF-4735-A8F0-276E98E71689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.DomainService", "FramesharpUniversity.DomainService\FramesharpUniversity.DomainService.csproj", "{8F0F2D43-2445-4E5B-8C06-32D97B4BD147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.Repository", "FramesharpUniversity.Repository\FramesharpUniversity.Repository.csproj", "{B0AD3212-9988-4B95-A9FE-22C5FA7470EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.DomainService.Test", "FramesharpUniversity.DomainService.Test\FramesharpUniversity.DomainService.Test.csproj", "{BF27B31B-8845-4B8F-A025-0E51ACB43C70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.Service", "FramesharpUniversity.Service\FramesharpUniversity.Service.csproj", "{0D418C44-B781-48C3-BA9A-2171E6755711}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FramesharpUniversity.Database", "FramesharpUniversity.Database\FramesharpUniversity.Database.sqlproj", "{DAF96426-8213-47B2-9DD9-6142940CBD45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesharpUniversity.WebApplication", "FramesharpUniversity.WebApplication\FramesharpUniversity.WebApplication.csproj", "{FC71ADF4-78DE-431F-99F3-8C8CD354F346}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
